@@ -21,6 +21,8 @@ public class User extends BaseEntity{
 
     private LevelUserEnum level;
 
+    private String email;
+
     public User() {
     }
     @Column(name = "username", unique = true, nullable = false)
@@ -71,5 +73,13 @@ public class User extends BaseEntity{
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+    @Column(name = "email")
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
